@@ -16,7 +16,7 @@ body {
   background: transparent;
 }
 .container{
-  border-radius: 5px;
+  border-radius: 0.313rem;
 }
 body::before {
   content: "";
@@ -514,7 +514,7 @@ section .container {
   align-items: center;
   padding: 20px;
   background: #f2f2f2;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   transition: ease-in-out 0.3s;
   
 }
@@ -688,7 +688,7 @@ section .container {
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 0.313rem;
 }
 
 .services .icon-box .icon {
@@ -696,7 +696,9 @@ section .container {
   width: 64px;
   height: 64px;
   background: #425372;
-  border-radius: 5px;
+  background: #425372;
+
+  border-radius: 0.313rem;
   transition: all .3s ease-out 0s;
   display: flex;
   align-items: center;
@@ -706,7 +708,7 @@ section .container {
 }
 
 .services .icon-box .icon i {
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 28px;
 }
 
@@ -717,8 +719,8 @@ section .container {
   top: -8px;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 5px;
+  background: rgba(52, 86, 131, 0.548);
+  border-radius: 0.313rem;
   transition: all .3s ease-out 0s;
   transform: translateZ(-1px);
 }
@@ -745,19 +747,23 @@ section .container {
 }
 
 .services .icon-box:hover .icon {
-  background: black;
+  background: #919191;
+  /* background-color: rebeccapurple; */
+ 
 }
 
 .services .icon-box:hover .icon i {
-  color: #425372;
+  color: black;
+  
 }
 
 .services .icon-box:hover .icon::before {
-  background: #35e888;
+  background: #ffffff;
+  
 }
 
-.services .icon-box:hover h4 a, .services .icon-box:hover p {
-  color: black;
+.services .icon-box:hover h4 a, .services .icon-box:hover p ,.services .icon-box:hover h4 {
+  color: #ffffff;
 }
 
 
@@ -998,7 +1004,7 @@ section .container {
   padding: 20px;
   width: 100%;
   background: #f2f2f2;
-  border-radius: 5px;
+  border-radius: 0.313rem;
 }
 
 .contact .info-box i.bx {
