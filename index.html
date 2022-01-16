@@ -11,6 +11,14 @@
 <link href=assets/img/favicon.webp rel=icon>
 <link href=assets/img/apple-touch-icon.webp rel=apple-touch-icon>
 <link crossorigin=anonymous rel=preload as=font href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel=stylesheet>
+<script>
+    function ThemeChange(){
+        console.log("ASdf")
+
+        document.body.style.backgroundImage = "url('assets/img/bg.webp')";
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+</script>
 </head>
 <body>
 <header id=header class>
@@ -28,6 +36,7 @@
 <li><a rel=external class=nav-link href=assets/HaydenCordeiro_Resume.pdf download=HaydenCordeiro_Resume.pdf>Download
 My Resume</a></li>
 </ul>
+<button onclick="ThemeChange()">asdf</button>
 <i class="bi bi-list mobile-nav-toggle"></i>
 </nav>
 <div class=social-links>
