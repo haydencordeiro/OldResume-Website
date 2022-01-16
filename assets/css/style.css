@@ -800,6 +800,7 @@ section .container {
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
   background: #425372;
+  color:#ffffff
 }
 
 .portfolio #portfolio-flters li:last-child {
