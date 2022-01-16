@@ -359,7 +359,7 @@ section .container {
   margin: 0 0 20px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #aaaaaa;
+
   font-family: "Poppins", sans-serif;
 }
 
@@ -632,7 +632,7 @@ section .container {
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid #d8d8d8;
   position: relative;
 }
 
