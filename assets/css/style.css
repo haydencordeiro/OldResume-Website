@@ -688,6 +688,7 @@ section .container {
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   width: 100%;
+  border-radius: 5px;
 }
 
 .services .icon-box .icon {
