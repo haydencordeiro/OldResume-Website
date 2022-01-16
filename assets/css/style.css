@@ -84,11 +84,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header h2 {
+ 
   font-size: 24px;
   margin-top: 20px;
   color: rgba(0, 0, 0, 0.8);
 }
-
+@media screen {
+  
+}
 #header h2 span {
   color: black;
   border-bottom: 2px solid #425372;
@@ -119,8 +122,9 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
 }
 
-#header .social-links a:hover {
+#header .social-links a:hover,#header .social-links a:hover i {
   background: #425372;
+  color: #ffffff;
 }
 
 @media (max-width: 992px) {
@@ -128,8 +132,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 36px;
   }
   #header h2 {
-    font-size: 20px;
+    /* padding-left: 1rem; */
+    font-size: 16px;
     line-height: 30px;
+    margin: 0;
+    margin-top: 1rem;
+    text-align: center;
   }
   #header .social-links {
     margin-top: 15px;
@@ -250,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: black;
+  /* color: black; */
   font-size: 28px;
   cursor: pointer;
   display: none;
