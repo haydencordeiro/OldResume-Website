@@ -16,7 +16,7 @@ body {
   background: transparent;
 }
 .container{
-  border-radius: 0.4rem
+  border-radius: 0.4rem;
 }
 body::before {
   content: "";
@@ -514,7 +514,7 @@ section .container {
   align-items: center;
   padding: 1.3rem;
   background: #f2f2f2;
-  border-radius: 0.4rem
+  border-radius: 0.4rem;
   transition: ease-in-out 0.3s;
   margin: 0;
 
@@ -690,7 +690,7 @@ section .container {
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   width: 100%;
-  border-radius: 0.4rem
+  border-radius: 0.4rem;
 }
 
 .services .icon-box .icon {
@@ -700,7 +700,7 @@ section .container {
   background: #425372;
   background: #425372;
 
-  border-radius: 0.4rem
+  border-radius: 0.4rem;
   transition: all .3s ease-out 0s;
   display: flex;
   align-items: center;
@@ -722,7 +722,7 @@ section .container {
   height: 100%;
   width: 100%;
   background: rgba(52, 86, 131, 0.548);
-  border-radius: 0.4rem
+  border-radius: 0.4rem;
   transition: all .3s ease-out 0s;
   transform: translateZ(-1px);
 }
@@ -1007,7 +1007,7 @@ section .container {
   padding: 20px;
   width: 100%;
   background: #f2f2f2;
-  border-radius: 0.4rem
+  border-radius: 0.4rem;
 }
 
 .contact .info-box i.bx {
