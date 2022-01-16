@@ -862,8 +862,8 @@ section .container {
   position: absolute;
   top: 35px;
   left: 35px;
-  border-top: 3px solid black;
-  border-left: 3px solid black;
+  border-top: 3px solid #f2f2f2;
+  border-left: 3px solid #f2f2f2;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -876,8 +876,8 @@ section .container {
   position: absolute;
   bottom: 35px;
   right: 35px;
-  border-bottom: 3px solid black;
-  border-right: 3px solid black;
+  border-bottom: 3px solid #f2f2f2;
+  border-right: 3px solid #f2f2f2;
   transition: all 0.5s ease 0s;
   z-index: 9994;
 }
@@ -910,7 +910,7 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #63eda3;
+  color: #425372;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -1036,7 +1036,7 @@ section .container {
 
 .contact .info-box p {
   padding: 0;
-  color: black;
+  color: #425372;
   line-height: 24px;
   font-size: 14px;
   margin: 0 0 0 68px;
@@ -1050,14 +1050,14 @@ section .container {
 .contact .info-box .social-links a {
   font-size: 18px;
   display: inline-block;
-  color: black;
+  color: #425372;
   line-height: 1;
   margin-right: 12px;
   transition: 0.3s;
 }
 
 .contact .info-box .social-links a:hover {
-  color: #425372;
+  color: #ffffff;
 }
 
 .contact .php-email-form {
@@ -1154,7 +1154,7 @@ section .container {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #15bb62;
+  background: #425372;
 }
 
 @-webkit-keyframes animate-loading {
