@@ -884,12 +884,12 @@ section .container {
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: black;
+  color: #f2f2f2;
   font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: blackfff;
+  color: #f2f2f2;
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
@@ -902,7 +902,7 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
-  color: black;
+  color: #f2f2f2;
   margin: 0 2px;
   font-size: 28px;
   display: inline-block;
