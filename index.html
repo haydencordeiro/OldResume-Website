@@ -640,11 +640,21 @@ crisis</li>
 </div>
 </section>
 <script>
-    var theme=localStorage.getItem("theme")|| "light";
-    
+    var theme=localStorage.getItem("theme");
+    console.log(theme)
+    if(theme==null){
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme="dark"
+        }else{
+            theme="light"
+            // console.log("sadf")
+        }
+    }
+
+
 
     function UpdateTheme(){
-        if(theme=="light"){
+        if(theme=="dark"){
 
             document.getElementById("bg-container").style.backgroundImage = "url('assets/img/bg.webp')";
             document.documentElement.setAttribute('data-theme', 'dark');
