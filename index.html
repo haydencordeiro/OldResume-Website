@@ -640,31 +640,44 @@ crisis</li>
 </div>
 </section>
 <script>
-    var theme=localStorage.getItem("theme") || "light";
-    console.log(theme)
-    var theme="light"
+    var theme=localStorage.getItem("theme")|| "light";
     
 
-    function ThemeChange(){
+    function UpdateTheme(){
         if(theme=="light"){
 
             document.getElementById("bg-container").style.backgroundImage = "url('assets/img/bg.webp')";
             document.documentElement.setAttribute('data-theme', 'dark');
             document.getElementById("togglebutton").textContent="Light Mode"
-            theme="dark"
+
+            
         }
         else{
             document.getElementById("bg-container").style.backgroundImage = "url('assets/img/bg1.jpg')";
             document.documentElement.setAttribute('data-theme', '');
             document.getElementById("togglebutton").textContent="Dark Mode"
-            theme="light"
         }
-        localStorage.setItem("theme", theme);
 
 
 
     }
-    ThemeChange()
+    UpdateTheme()
+    function ThemeChange(){
+
+        if(theme=="light"){
+            
+        localStorage.setItem("theme", "dark");
+
+        }
+        else{
+            theme="light"
+        localStorage.setItem("theme", "light");
+
+        }
+        UpdateTheme()
+
+
+    }
 </script>
 <script src=assets/vendor/bootstrap/js/bootstrap.bundle.min.js></script>
 <script defer src=assets/vendor/glightbox/js/glightbox.min.js></script>
