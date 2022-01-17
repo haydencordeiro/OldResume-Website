@@ -8,7 +8,8 @@
   --social-links-bg:#dfdfdf;
   --portfolio-hover-text:#f2f2f2;
 
-  --toggle-theme-button-bg:#425372;
+
+  --toggle-btn-bg:#425372 ;
 
 }
 [data-theme="dark"] 
@@ -22,14 +23,14 @@
   --social-links-bg:rgba(255,255,255,.1);
   --portfolio-hover-text:#ffff;
 
-  --toggle-theme-button-bg:#111;
+  --toggle-btn-bg:rgba(255, 255, 255, 0.2);
 
 
 }
 
 .label {
   margin-left: 3.9rem;
-background-color: #111a2a;
+background-color:  var(--toggle-btn-bg);
 border-radius: 50px;
 cursor: pointer;
 display: flex;
@@ -38,7 +39,7 @@ justify-content: space-between;
 padding: 5px;
 position: relative;
 height: 22px;
-width: 48px;
+width: 47px;
 transform: scale(1.5);
 }
 .label .ball {
