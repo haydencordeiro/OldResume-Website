@@ -11,29 +11,8 @@
 <link href=assets/img/favicon.webp rel=icon>
 <link href=assets/img/apple-touch-icon.webp rel=apple-touch-icon>
 <link crossorigin=anonymous rel=preload as=font href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel=stylesheet>
-<script>
-    var theme="light"
-    function ThemeChange(){
-        // console.log(theme)
-        if(theme=="light"){
-
-            document.getElementById("bg-container").style.backgroundImage = "url('assets/img/bg.webp')";
-        document.documentElement.setAttribute('data-theme', 'dark');
-            document.getElementById("togglebutton").textContent="Light Theme"
-            theme="dark"
-        }
-        else{
-            document.getElementById("bg-container").style.backgroundImage = "url('assets/img/bg1.jpg')";
-        document.documentElement.setAttribute('data-theme', '');
-        document.getElementById("togglebutton").textContent="Dark Theme"
 
 
-            theme="light"
-        }
-
-
-    }
-</script>
 </head>
 <body>
     <div id="bg-container"></div>
@@ -51,7 +30,8 @@
 <li><a rel=external class=nav-link href=#contact>Contact</a></li>
 <li><a rel=external class=nav-link href=assets/HaydenCordeiro_Resume.pdf download=HaydenCordeiro_Resume.pdf>Download
 My Resume</a></li>
-<button id="togglebutton" type="button" class="btn btn-primary" onclick="ThemeChange()">Dark Theme</button>
+<button id="togglebutton" type="button" class="btn btn-primary" onclick="ThemeChange()">Dark Mode</button>
+
 <style>
 
 </style>
@@ -659,7 +639,32 @@ crisis</li>
 </div>
 </div>
 </section>
+<script>
+    var theme=localStorage.getItem("theme") || "light";
+    console.log(theme)
+    
 
+    function ThemeChange(){
+        if(theme=="light"){
+
+            document.getElementById("bg-container").style.backgroundImage = "url('assets/img/bg.webp')";
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.getElementById("togglebutton").textContent="Light Mode"
+            theme="dark"
+        }
+        else{
+            document.getElementById("bg-container").style.backgroundImage = "url('assets/img/bg1.jpg')";
+            document.documentElement.setAttribute('data-theme', '');
+            document.getElementById("togglebutton").textContent="Dark Mode"
+            theme="light"
+        }
+        localStorage.setItem("theme", theme);
+
+
+
+    }
+    ThemeChange()
+</script>
 <script src=assets/vendor/bootstrap/js/bootstrap.bundle.min.js></script>
 <script defer src=assets/vendor/glightbox/js/glightbox.min.js></script>
 <script defer src=assets/vendor/isotope-layout/isotope.pkgd.min.js></script>
