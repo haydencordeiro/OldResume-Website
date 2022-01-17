@@ -23,6 +23,14 @@
 
 
 }
+#togglebutton{
+  border-color: var(--one);
+  margin:1rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  background-color:var(--one);
+  color:#ffffff !important;
+}
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #040404;

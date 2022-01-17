@@ -19,12 +19,14 @@
 
             document.getElementById("bg-container").style.backgroundImage = "url('assets/img/bg.webp')";
         document.documentElement.setAttribute('data-theme', 'dark');
-            
+            document.getElementById("togglebutton").textContent="Light Theme"
             theme="dark"
         }
         else{
             document.getElementById("bg-container").style.backgroundImage = "url('assets/img/bg1.jpg')";
         document.documentElement.setAttribute('data-theme', '');
+        document.getElementById("togglebutton").textContent="Dark Theme"
+
 
             theme="light"
         }
@@ -49,8 +51,12 @@
 <li><a rel=external class=nav-link href=#contact>Contact</a></li>
 <li><a rel=external class=nav-link href=assets/HaydenCordeiro_Resume.pdf download=HaydenCordeiro_Resume.pdf>Download
 My Resume</a></li>
+<button id="togglebutton" type="button" class="btn btn-primary" onclick="ThemeChange()">Dark Theme</button>
+<style>
+
+</style>
 </ul>
-<button onclick="ThemeChange()">asdf</button>
+
 <i class="bi bi-list mobile-nav-toggle"></i>
 </nav>
 <div class=social-links>
