@@ -55,6 +55,18 @@ transition: transform 0.2s linear;
 }.checkbox:checked + .label .ball {
 transform: translateX(24px);
 }
+@media (max-width: 992px) {
+  .label {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    height: 24px;
+    width: 50px;
+  }
+  .label .ball {
+  height: 20px;
+  width: 20px;
+  }
+}
 
 .checkbox {
 opacity: 0;
@@ -179,9 +191,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 20px;
   color: var(--header-subtitle);
 }
-@media screen {
-  
-}
+
 #header h2 span {
   color: var(--three);;
   border-bottom: 2px solid var(--one);;
