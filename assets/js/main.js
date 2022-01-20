@@ -24,14 +24,14 @@ function CheckAndToggle(ele)
       header_prop.classList.remove("header-top")
     }
     has_reached_bottom=((window.innerHeight + window.scrollY) >= document.body.offsetHeight);
-
-
+    has_reached_top=window.scrollY===0;
+    console.log(has_reached_top)
     if (element.offsetTop   < document.documentElement.scrollTop && document.documentElement.scrollTop< element.offsetTop+element.offsetHeight){
       element.classList.add('active')
       navbar_links.forEach((link)=>{
           temp=link.href.split("#")
 
-          if((temp[temp.length-1]===ele && !has_reached_bottom)||(has_reached_bottom && temp[temp.length-1]==="contact")){
+          if((temp[temp.length-1]===ele && !has_reached_bottom && !has_reached_top)||(has_reached_bottom && temp[temp.length-1]==="contact")||(has_reached_top && temp[temp.length-1]==="header")){
 
             link.classList.add('active')
           }

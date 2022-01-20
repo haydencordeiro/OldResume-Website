@@ -11,8 +11,11 @@
 <link href=assets/img/favicon.webp rel=icon>
 <link href=assets/img/apple-touch-icon.webp rel=apple-touch-icon>
 <link crossorigin=anonymous rel=preload as=font href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel=stylesheet>
+
+<script src="https://kit.fontawesome.com/7c0dadb601.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="bg-container"></div>
 <header id=header class>
 <div class=container>
 <h1><span>Hayden Cordeiro</span></h1>
@@ -25,9 +28,20 @@
 <li><a rel=external class=nav-link href=#accomplishments>Accomplishments</a></li>
 <li><a rel=external class=nav-link href=#portfolio>Portfolio</a></li>
 <li><a rel=external class=nav-link href=#contact>Contact</a></li>
-<li><a rel=external class=nav-link href=assets/HaydenCordeiro_Resume.pdf download=HaydenCordeiro_Resume.pdf>Download
-My Resume</a></li>
+<li><a rel=external class=nav-link href=assets/HaydenCordeiro_Resume.pdf style="text-decoration: underline;" download=HaydenCordeiro_Resume.pdf>Download Resume</a></li>
+<!-- <button id="togglebutton" type="button" class="btn btn-primary" onclick="ThemeChange()">Dark Mode</button> -->
+<div>
+	<input type="checkbox" class="checkbox" id="chk" onclick="ThemeChange()" />
+	<label class="label" for="chk">
+		<i class="fas fa-sun"></i>
+		<i class="fas fa-moon"></i>
+		<div class="ball"></div>
+	</label>
+</div>
+
+
 </ul>
+
 <i class="bi bi-list mobile-nav-toggle"></i>
 </nav>
 <div class=social-links>
@@ -630,7 +644,59 @@ crisis</li>
 </div>
 </div>
 </section>
+<script>
+    var theme=localStorage.getItem("theme");
+    console.log(theme)
+    if(theme==null){
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme="dark"
+        }else{
+            theme="light"
+            // console.log("sadf")
+        }
+    }
 
+
+
+    function UpdateTheme(){
+        if(theme=="dark"){
+
+            document.getElementById("bg-container").style.backgroundImage = "url('assets/img/bg.webp')";
+            document.documentElement.setAttribute('data-theme', 'dark');
+            // document.getElementById("togglebutton").textContent="Light Mode"
+            document.getElementById("chk").checked=true;
+
+            
+        }
+        else{
+            document.getElementById("bg-container").style.backgroundImage = "url('assets/img/bg1.jpg')";
+            document.documentElement.setAttribute('data-theme', '');
+            // document.getElementById("togglebutton").textContent="Dark Mode"
+            document.getElementById("chk").checked=false;
+
+        }
+
+
+
+    }
+    UpdateTheme()
+    function ThemeChange(){
+
+        if(theme=="light"){
+        theme="dark"           
+        localStorage.setItem("theme", "dark");
+
+        }
+        else{
+            theme="light"
+        localStorage.setItem("theme", "light");
+
+        }
+        UpdateTheme()
+
+
+    }
+</script>
 <script src=assets/vendor/bootstrap/js/bootstrap.bundle.min.js></script>
 <script defer src=assets/vendor/glightbox/js/glightbox.min.js></script>
 <script defer src=assets/vendor/isotope-layout/isotope.pkgd.min.js></script>
