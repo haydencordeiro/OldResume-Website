@@ -17,7 +17,7 @@
     --one:#78c1ff ;
     --two:black;
     --three:#ffffff;
-    --four:rgba(255,255,255,.08);;
+    --four:rgba(255, 255, 255, 0.08);;
     --header-subtitle:rgba(255, 255, 255, 0.8);
     --hover:#3574e8;
     --social-links-bg:rgba(255,255,255,.1);
@@ -27,7 +27,10 @@
   
   
   }
-  
+  p,li{
+    color:var( --three) !important;
+  }
+
   .label {
     margin-left: 3.9rem;
   background-color:  var(--toggle-btn-bg);
@@ -90,7 +93,7 @@
   body {
     font-family: "Open Sans", sans-serif;
     background-color: #040404;
-    color: var(--three);;
+    color:var( --three) !important;
     position: relative;
     background: transparent;
   }
@@ -133,8 +136,9 @@
   @media (min-width: 1024px) {
     body {
       background-attachment: fixed;
-  
-  
+
+      color:var( --three) !important;
+
     }
   }
   
@@ -760,7 +764,8 @@
   
   .resume .resume-item h5 {
     font-size: 16px;
-    background: rgba(255, 255, 255, 0.15);
+    background:var( --toggle-btn-bg);
+    color:#eaeaea ;
     padding: 5px 15px;
     display: inline-block;
     font-weight: 600;
