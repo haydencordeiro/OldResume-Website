@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: npx @percy/cli snapshot sitemap.xml
+      - run: npx @percy/cli snapshot index.html
