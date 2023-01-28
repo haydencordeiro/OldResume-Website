@@ -1,0 +1,9 @@
+name: CI
+  build:
+    runs-on: ubuntu-latest
+      - uses: actions/checkout@v3
+      
+      # Build
+      
+      - name: Percy Test
+        run: npx @percy/cli snapshot / # or any directory such as public/
