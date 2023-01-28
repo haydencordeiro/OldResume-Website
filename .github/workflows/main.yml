@@ -1,9 +1,14 @@
 name: CI
-run-name: Percy Test
-on: [push]
+on: [push, pull_request]
 jobs:
-  vrt:
+  default:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: npx @percy/cli snapshot /index.html
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Install
+        run: yarn
+      - name: Percy Test
+        uses: percy/storybook-action@v0.1.4
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }
