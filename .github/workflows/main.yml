@@ -11,4 +11,4 @@ jobs:
       - name: Percy Test
         uses: percy/storybook-action@v0.1.4
         env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
