@@ -1,9 +1,9 @@
 name: CI
-  build:
+run-name: Percy Test
+on: [push]
+jobs:
+  vrt:
     runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v3
-      
-      # Build
-      
-      - name: Percy Test
-        run: npx @percy/cli snapshot / # or any directory such as public/
+      - run: npx @percy/cli snapshot /
