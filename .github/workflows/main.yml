@@ -1,11 +1,8 @@
-- name: Create screenshots
-  uses: alexrogalskiy/github-action-screenshots@master
-  with:
-    url: 'https://haydencordeiro.itch.io/jetchat'
-    name: 'screenshot'
-    path: 'images'
-    extension: 'png'
-    encoding: 'binary'
-    fullPage: true
-    width: 400
-    height: 400
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # This step checks out a copy of your repository.
+      - uses: actions/checkout@v3
+      # This step references the directory that contains the action.
+      - uses: ./.github/actions/main.yml
