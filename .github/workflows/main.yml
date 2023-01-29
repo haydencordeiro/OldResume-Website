@@ -1,18 +1,15 @@
 name: default
 on: push
 jobs:
-  build:
+  screenshot:
     runs-on: ubuntu-latest
     steps:
-      # This step checks out a copy of your repository.
-      - uses: actions/checkout@v3
-      - uses: alexrogalskiy/github-action-screenshots@master
+      - uses: actions/setup-node@v1
         with:
-          url: 'https://haydencordeiro.itch.io/jetchat'
-          name: 'screenshot'
-          path: 'images'
-          extension: 'png'
-          encoding: 'binary'
-          fullPage: true
-          width: 400
-          height: 400
+          node-version: '14'
+      
+      - name: Test Action
+        uses: JonathanTreffler/full-website-screenshot-action@v1.0
+        with:
+          url: https://haydencordeiro.itch.io/jetchat
+          destination: ./screenshot.png
