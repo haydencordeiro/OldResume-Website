@@ -1,9 +1,11 @@
-# name: CI
-# run-name: Percy Test
-# on: [push]
-# jobs:
-#   vrt:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v3
-#       - run: npx @percy/cli snapshot https://percy.io/sitemap.xml
+- name: Create screenshots
+  uses: alexrogalskiy/github-action-screenshots@master
+  with:
+    url: 'https://haydencordeiro.itch.io/jetchat'
+    name: 'screenshot'
+    path: 'images'
+    extension: 'png'
+    encoding: 'binary'
+    fullPage: true
+    width: 400
+    height: 400
