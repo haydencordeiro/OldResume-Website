@@ -1,3 +1,4 @@
+// https://jscompress.com/
 window.onscroll = function() {test2()};
 
 
@@ -17,7 +18,6 @@ function CheckAndToggle(ele)
     }
     has_reached_bottom=((window.innerHeight + window.scrollY) >= document.body.offsetHeight);
     has_reached_top=window.scrollY===0;
-    console.log(has_reached_top)
     if (element.offsetTop   < document.documentElement.scrollTop && document.documentElement.scrollTop< element.offsetTop+element.offsetHeight){
       element.classList.add('active')
       navbar_links.forEach((link)=>{
@@ -40,7 +40,7 @@ function test2(){
 
   CheckAndToggle("header")
   CheckAndToggle("about")
-  CheckAndToggle("resume")
+  CheckAndToggle("certifications")
   CheckAndToggle("accomplishments")
   CheckAndToggle("portfolio")
   CheckAndToggle("contact")
@@ -136,7 +136,6 @@ function test2(){
         // return;
       }
       else{
-        console.log()
         header.classList.add('header-top')
 
       }
